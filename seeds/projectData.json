@@ -1,14 +1,30 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area."
+    "name": "Udemy",
+    "description": "Started on a new Udemy JavaScript course. I'll keep y'all updated on how it goes!"
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
+    "name": "Linear Gradients",
+    "description": "Eggs gradient is one of my favorite sites to find gradient inspo and ideas."
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes."
+    "name": "TIRED!",
+    "description": "I've spent about 8 hours JUST today on leetcode questions!!!"
+  },
+  {
+    "name": "New Project",
+    "description": "I started on a new project to track all the NFL game stats in one easy place."
+  },
+  {
+    "name": "Upgrading My Keyboard",
+    "description": "I just got the new logitech mechanical keyboard and I have to say it's pretty good! I give it a 8/10"
+  },
+  {
+    "name": "IOS16 Review",
+    "description": "After a week of using IOS16 I have to say they really stepped their game up!"
+  },
+  {
+    "name": "No wifi no problem!",
+    "description": "I'm working on recreating the google chrome dinosaur game"
   }
 ]

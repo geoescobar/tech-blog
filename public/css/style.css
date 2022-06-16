@@ -1,4 +1,84 @@
 body {
-    background-color: black;
-    color: blanchedalmond;
+  background-color: #001427;
+  color: white;
+  font-family: "Bevellier", sans-serif;
 }
+
+/* homepage styling  */
+
+.homepage-container {
+  width: 400px;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 100px 450px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #44cfcb;
+  padding: 20px 20px;
+  border-radius: 10%;
+  white-space: nowrap;
+}
+
+.homepage-title {
+  font-weight: bold;
+  font-size: 5em;
+}
+
+.homepage-text {
+  font-size: 1.5em;
+}
+
+.button {
+  background-color: #44cfcb;
+  padding: 10px 10px;
+  border-radius: 10%;
+  color: #001427;
+  font-family: "Bevellier", sans-serif;
+  font-size: large;
+  border-style: solid;
+  border-color: #44cfcb;
+  cursor: pointer;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #001427;
+  color: white;
+  border-color: #44cfcb;
+  border-style: solid;
+}
+
+/* login page */
+.login-container {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 450px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #44cfcb;
+  padding: 20px 20px;
+  width: 400px;
+  border-radius: 10%;
+  white-space: nowrap;
+}
+
+.login-title {
+  text-align: center;
+}
+
+.login-user {
+  margin-bottom: 10px;
+}
+
+.login-submit p {
+  margin-top: 10px;
+}
+
+.link {
+  color: #44cfcb;
+}
+
+/* sign-up page */
