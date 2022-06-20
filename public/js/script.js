@@ -4,8 +4,8 @@ console.log("test");
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.getElementById("loginemail").value.trim();
-  const password = document.getElementById("loginpwd").value.trim();
+  const email = document.getElementById("login-username").value.trim();
+  const password = document.getElementById("login-password").value.trim();
 
   if (email && password) {
     const response = await fetch("/api/users/login", {
@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/homepage");
     } else {
       alert("Failed to log in");
     }
@@ -30,8 +30,8 @@ document
 const signup = async (event) => {
   event.preventDefault();
 
-  const username = document.getElementById("userinfoname").value.trim();
-  const password = document.getElementById("passwordsignup").value.trim();
+  const username = document.getElementById("signup-username").value.trim();
+  const password = document.getElementById("signup-password").value.trim();
 
   if (email && password && fname && lname && username) {
     const response = await fetch("/api/users", {
@@ -41,9 +41,9 @@ const signup = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/login");
     } else {
-      alert("Failed to log in");
+      alert("Failed to create new user");
     }
   }
 };
