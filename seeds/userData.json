@@ -1,30 +1,30 @@
 [
   {
-    "user_name": "javascript_goat",
+    "username": "javascript_goat",
     "password": "password000111"
   },
   {
-    "user_name": "mr_css",
+    "username": "mr_css",
     "password": "password000222"
   },
   {
-    "user_name": "pb_and_json",
+    "username": "pb_and_json",
     "password": "password000333"
   },
   {
-    "user_name": "cowboys214",
+    "username": "cowboys214",
     "password": "password000444"
   },
   {
-    "user_name": "mario_kartz",
+    "username": "mario_kartz",
     "password": "password000555"
   },
   {
-    "user_name": "tech_reviews01",
+    "username": "tech_reviews01",
     "password": "password000666"
   },
   {
-    "user_name": "xxProxxCoderxx",
+    "username": "dr_react",
     "password": "password000777"
   }
 ]

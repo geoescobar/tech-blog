@@ -1,5 +1,3 @@
-console.log("test");
-
 // ================================ login ================================
 const loginFormHandler = async (event) => {
   event.preventDefault();
@@ -13,9 +11,9 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response);
     if (response.ok) {
-      document.location.replace("/homepage");
+      document.location.replace("/feed");
     } else {
       alert("Failed to log in");
     }
@@ -29,17 +27,17 @@ document
 // ================================ sign-up ================================
 const signup = async (event) => {
   event.preventDefault();
-
+  console.log("object");
   const username = document.getElementById("signup-username").value.trim();
   const password = document.getElementById("signup-password").value.trim();
 
-  if (email && password && fname && lname && username) {
-    const response = await fetch("/api/users", {
+  if (username && password) {
+    const response = await fetch("/api/users/signup", {
       method: "POST",
-      body: JSON.stringify({ email, password, lname, fname, username }),
+      body: JSON.stringify({ username, password }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response);
     if (response.ok) {
       document.location.replace("/login");
     } else {
@@ -48,6 +46,23 @@ const signup = async (event) => {
   }
 };
 
-document.getElementById("signupbttn")?.addEventListener("click", signup);
+document.getElementById("signup-bttn")?.addEventListener("click", signup);
 
+// ================================ log out ================================
+const logout = async (event) => {
+  event.preventDefault();
 
+  const response = await fetch("/api/users/logout", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  });
+
+  if (response.ok) {
+    document.location.replace("/");
+  } else {
+    alert("Logged Out");
+  }
+};
+
+const logoutBtn = document.getElementById("logout");
+logoutBtn?.addEventListener("click", logout);
