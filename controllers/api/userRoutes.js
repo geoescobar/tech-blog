@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+// ================================ log-in ================================
+
 router.post("/login", async (req, res) => {
   console.log("hello world");
   try {
@@ -51,6 +53,8 @@ router.post("/signup", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+// ================================ logout ================================
 
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {

@@ -7,17 +7,9 @@
         <li class="nav-item">
           <a
             id="#"
-            class="text-light nav-link active underline"
-            aria-current="page"
-            href="#"
-          >Home</a>
-        </li>
-        <li class="nav-item">
-          <a
-            id="#"
             class="text-light nav-link active"
             aria-current="page"
-            href="#"
+            href="/homepage"
           >Profile</a>
         </li>
         <li class="nav-item">
@@ -33,16 +25,84 @@
   </nav>
 </header>
 
-
-{{!-- card --}}
 <div class="d-flex justify-content-center">
-  <div class="post-container">
-    <div class="post-header">
-      <h3>Title</h3>
-      <h4>user</h4>
-    </div>
-    <div class="post-content">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, itaque.</p>
+  <div class="card card-container text-dark">
+    <div class="card-body card-title">
+      <form action="/action_page.php">
+        <label for="fname">Post Title:</label><br />
+        <input
+          type="text"
+          id="post-title"
+          name="fname"
+          placeholder="Enter Text..."
+          size="60"
+        /><br />
+        <label for="lname">Post Content:</label><br />
+        <input
+          type="text"
+          id="post-content"
+          name="lname"
+          placeholder="Enter Text..."
+          size="60"
+        /><br /><br />
+        <button id="post-btn" class="post-btn" type="submit">
+          Post
+        </button>
+      </form>
     </div>
   </div>
 </div>
+
+{{! card }}
+<div class="feed-posts">
+  <div class="d-flex justify-content-center">
+    <div class="card card-container text-dark">
+      <div class="card-body card-title">
+        <h3>Title</h3>
+        <p class="username">@user</p>
+      </div>
+      <div class="card-body card-post">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
+          aspernatur!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="card card-container text-dark">
+      <div class="card-body card-title">
+        <h3>Title</h3>
+        <p class="username">@user</p>
+      </div>
+      <div class="card-body card-post">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
+          aspernatur!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="card card-container text-dark">
+      <div class="card-body card-title">
+        <h3>Title</h3>
+        <p class="username">@user</p>
+      </div>
+      <div class="card-body card-post">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
+          aspernatur!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="d-flex justify-content-center">
+  <div class="card card-container text-dark">
+    <div class="card-body card-title">
+      <h3>{{content.title}}</h3>
+      <p class="username">@{{user.username}}</p>
+    </div>
+    <div class="card-body card-post">
+      <p>{{content.post}}</p>
+    </div>
+  </div>
+</div> --}}

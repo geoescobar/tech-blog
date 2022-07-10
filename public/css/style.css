@@ -2,6 +2,7 @@ body {
   background-color: #001427;
   color: white;
   font-family: "Bevellier", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* homepage styling  */
@@ -81,4 +82,15 @@ body {
   color: #44cfcb;
 }
 
-/* sign-up page */
+.line {
+  color: #001427;
+  background-color: #001427;
+}
+
+.username {
+  color: #44cfcb !important;
+}
+
+.card {
+  margin-bottom: 10px !important;
+}
