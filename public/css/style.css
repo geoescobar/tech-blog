@@ -94,3 +94,51 @@ body {
 .card {
   margin-bottom: 10px !important;
 }
+
+.post-btn {
+  border-radius: 10%;
+  border-style: solid;
+  border-color: #44cfcb;
+  border-width: 2px;
+  padding: 10px 10px;
+  background-color: #001427;
+  color: aliceblue;
+}
+
+.edit-btn {
+  background-color: #001427;
+  color: aliceblue;
+  padding: 10px 10px;
+  border-radius: 10%;
+  border-color: #44cfcb;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.delete-btn {
+  background-color: #001427;
+  color: aliceblue;
+  padding: 10px 10px;
+  border-radius: 10%;
+  border-color: #44cfcb;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.my-posts {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.my-username {
+  display: flex;
+  justify-content: center;
+  color: #44cfcb;
+  font-size: 3em;
+}
+
+.instructions {
+  display: flex;
+  justify-content: center;
+}
