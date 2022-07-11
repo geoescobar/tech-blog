@@ -66,3 +66,31 @@ const logout = async (event) => {
 
 const logoutBtn = document.getElementById("logout");
 logoutBtn?.addEventListener("click", logout);
+
+// ================================ post ================================
+
+const newPost = async (event) => {
+  event.preventDefault();
+
+  const postTitle = document.getElementById("post-title").value.trim();
+  const postBody = document.getElementById("post-content").value.trim();
+
+  if ((postTitle, postBody)) {
+    const response = await fetch(`/api/dashboard`, {
+      method: "POST",
+      body: JSON.stringify({ postTitle, postBody }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(post);
+
+    if (response.ok) {
+      window.location.reload();
+    } else {
+      alert("Failed to create post");
+    }
+  }
+};
+
+document.getElementById("post-btn")?.addEventListener("click", newPost);
