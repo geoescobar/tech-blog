@@ -28,58 +28,20 @@
 {{> posts }}
 
 {{! card }}
+{{#each posts}}
 <div class="feed-posts">
   <div class="d-flex justify-content-center">
-    <div class="card card-container text-dark">
+    <div class="card card-container text-dark" style="width: 50rem;">
       <div class="card-body card-title">
-        <h3>Title</h3>
-        <p class="username">@user</p>
+        <h3>{{postTitle}}</h3>
+        <p class="username">@{{user.username}}</p>
       </div>
       <div class="card-body card-post">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
-          aspernatur!</p>
+        <p>{{postBody}}</p>
       </div>
     </div>
   </div>
-
-  <div class="d-flex justify-content-center">
-    <div class="card card-container text-dark">
-      <div class="card-body card-title">
-        <h3>Title</h3>
-        <p class="username">@user</p>
-      </div>
-      <div class="card-body card-post">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
-          aspernatur!</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="d-flex justify-content-center">
-    <div class="card card-container text-dark">
-      <div class="card-body card-title">
-        <h3>Title</h3>
-        <p class="username">@user</p>
-      </div>
-      <div class="card-body card-post">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi,
-          aspernatur!</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-{{!-- <div class="d-flex justify-content-center">
-  <div class="card card-container text-dark">
-    <div class="card-body card-title">
-      <h3>{{content.title}}</h3>
-      <p class="username">@{{user.username}}</p>
-    </div>
-    <div class="card-body card-post">
-      <p>{{content.post}}</p>
-    </div>
-  </div>
-</div> --}}
+{{/each}}
 
 
 

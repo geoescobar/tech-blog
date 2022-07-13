@@ -43,7 +43,16 @@ router.get("/homepage", async (req, res) => {
 // ===================== feed =====================
 router.get("/feed", async (req, res) => {
   try {
-    res.render("feed");
+    const dbPosts = await Posts.findAll({
+      include: [
+        {
+          model: User,
+        },
+      ],
+    });
+    const posts = dbPosts.map((post) => post.get({ plain: true }));
+    console.log("posts>>>", posts);
+    res.render("feed", { posts });
   } catch (error) {
     res.json(error);
   }

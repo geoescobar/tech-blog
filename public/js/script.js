@@ -1,3 +1,4 @@
+let editable = true;
 // ================================ login ================================
 const loginFormHandler = async (event) => {
   event.preventDefault();
@@ -76,15 +77,14 @@ const newPost = async (event) => {
   const postBody = document.getElementById("post-content").value.trim();
 
   if ((postTitle, postBody)) {
-    const response = await fetch(`/api/dashboard`, {
+    const response = await fetch(`/api/posts`, {
       method: "POST",
       body: JSON.stringify({ postTitle, postBody }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-    console.log(post);
-
+    console.log(response);
     if (response.ok) {
       window.location.reload();
     } else {
@@ -94,3 +94,17 @@ const newPost = async (event) => {
 };
 
 document.getElementById("post-btn")?.addEventListener("click", newPost);
+
+// ================================ mypost edit ================================
+
+const deleteBtn = document.getElementById("delete-btn");
+const editBtn = document.getElementById("edit-btn");
+const saveBtn = document.getElementById("save-btn");
+
+editBtn.addEventListener("click", function () {
+  if (editable) {
+    editable = false;
+  } else {
+    editable = true;
+  }
+});

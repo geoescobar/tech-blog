@@ -11,11 +11,14 @@ Posts.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    postTitle: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    postBody: {
+      type: DataTypes.STRING,
+    },
+    user_id: {
       type: DataTypes.STRING,
     },
     date_created: {

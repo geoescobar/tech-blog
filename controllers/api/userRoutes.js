@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../../models");
+const { uuid } = require("uuidv4");
 
 // ================================ log-in ================================
 
@@ -41,7 +42,7 @@ router.post("/login", async (req, res) => {
 // ================================ sign-up ================================
 router.post("/signup", async (req, res) => {
   try {
-    const dbNewUser = await User.create(req.body);
+    const dbNewUser = await User.create({ ...req.body, id: uuid() });
 
     // req.session.save(() => {
     //   req.session.logged_in = true;
