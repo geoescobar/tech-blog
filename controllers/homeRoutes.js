@@ -31,15 +31,6 @@ router.get("/signup", async (req, res) => {
   }
 });
 
-// ===================== homepage =====================
-router.get("/homepage", async (req, res) => {
-  try {
-    res.render("homepage");
-  } catch (error) {
-    res.json(error);
-  }
-});
-
 // ===================== feed =====================
 router.get("/feed", async (req, res) => {
   try {
@@ -57,4 +48,24 @@ router.get("/feed", async (req, res) => {
     res.json(error);
   }
 });
+
+// ===================== homepage =====================
+
+// make it work
+router.get("/homepage", withAuth, async (req, res) => {
+  console.log("test:", req.session.user_id);
+  try {
+    const userPosts = await Posts.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const myPosts = userPosts.map((post) => post.get({ plain: true }));
+    console.log("my posts:", myPosts);
+    res.render("homepage", { myPosts });
+  } catch (error) {
+    res.json(error);
+  }
+});
+
 module.exports = router;

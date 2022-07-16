@@ -1,4 +1,3 @@
-let editable = true;
 // ================================ login ================================
 const loginFormHandler = async (event) => {
   event.preventDefault();
@@ -96,15 +95,31 @@ const newPost = async (event) => {
 document.getElementById("post-btn")?.addEventListener("click", newPost);
 
 // ================================ mypost edit ================================
-
 const deleteBtn = document.getElementById("delete-btn");
 const editBtn = document.getElementById("edit-btn");
 const saveBtn = document.getElementById("save-btn");
 
-editBtn.addEventListener("click", function () {
-  if (editable) {
-    editable = false;
-  } else {
-    editable = true;
-  }
+saveBtn.style.display = "none";
+editBtn.style.display = "block";
+deleteBtn.style.display = "block";
+
+editBtn.addEventListener("click", () => {
+  saveBtn.style.display = "block";
+  deleteBtn.style.display = "none";
+  editBtn.style.display = "none";
 });
+
+saveBtn.addEventListener("click", () => {
+  saveBtn.style.display = "none";
+  deleteBtn.style.display = "block";
+  editBtn.style.display = "block";
+});
+
+const edit = (e) => {
+  // console.log("foo", e);
+  const postId = e.target.getAttribute("data-postId");
+  const inputField = document.getElementById(`input-${postId}`);
+  const postContent = document.getElementById(`post-${postId}`);
+
+  inputField.hidden = false;
+};

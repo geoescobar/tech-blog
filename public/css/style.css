@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #001427;
   color: white;
@@ -143,3 +149,13 @@ body {
   justify-content: center;
 }
 
+.posts {
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: calc(106vh - 158px);
+  scrollbar-color: #44cfcb;
+}
+
+.feed {
+  margin-top: 20px;
+}
