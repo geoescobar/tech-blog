@@ -51,7 +51,6 @@ router.get("/feed", async (req, res) => {
 
 // ===================== homepage =====================
 
-// make it work
 router.get("/homepage", withAuth, async (req, res) => {
   console.log("test:", req.session.user_id);
   try {

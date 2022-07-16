@@ -1,0 +1,13 @@
+{{#each posts}}
+  <div class="d-flex justify-content-center">
+    <div class="card card-container text-dark" style="width: 50rem;">
+      <div class="card-body card-title">
+        <h3>{{postTitle}}</h3>
+        <p class="username">@{{user.username}}</p>
+      </div>
+      <div class="card-body card-post">
+        <p>{{postBody}}</p>
+      </div>
+    </div>
+  </div>
+{{/each}}

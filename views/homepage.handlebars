@@ -24,47 +24,10 @@
   </nav>
 </header>
 
-{{! <div class="profile-feed">
-
-
-</div> }}
-<div class="container">
+<div class="container feed">
   <div class="row justify-content-between">
     <div class="col-8 posts">
-      {{#each myPosts}}
-        <div class="d-flex justify-content-center">
-          <div class="card card-container text-dark" style="width: 50rem;">
-            <div class="card-body card-title">
-              <h3>{{postTitle}}</h3>
-            </div>
-            <div class="card-body card-post">
-              <p id="post-{{id}}" data-postId="{{id}}">{{postBody}}</p>
-              <input
-                value="{{postBody}}"
-                hidden="true"
-                size="50"
-                id="input-{{id}}"
-              />
-            </div>
-            <div class="d-flex justify-content-evenly">
-              <button id="delete-btn" class="delete-btn"><i
-                  class="bi bi-trash"
-                ></i>
-              </button>
-              <button id="save-btn" class="edit-btn">Save
-              </button>
-              <button
-                id="edit-btn"
-                class="edit-btn"
-                onclick="edit(event)"
-                data-postId="{{id}}"
-              ><i class="bi bi-pencil-square" data-postId="{{id}}"></i>
-              </button>
-
-            </div>
-          </div>
-        </div>
-      {{/each}}
+      {{>myPosts}}
     </div>
     <div class="col-4">
       <div class="d-flex justify-content-center">

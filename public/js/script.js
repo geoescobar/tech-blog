@@ -123,3 +123,23 @@ const edit = (e) => {
 
   inputField.hidden = false;
 };
+
+// ================================ delete post ================================
+const deletePost = async (e) => {
+  if (e.target.hasAttribute("data-postId")) {
+    const postId = e.target.getAttribute("data-postId");
+
+    const response = await fetch(`/api/homepage/${postId}`, {
+      method: "DELETE",
+    });
+
+    console.log(response);
+
+    if (response.ok) {
+      window.location.reload();
+    } else {
+      alert("Failed to delete post");
+    }
+  }
+};
+
