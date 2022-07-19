@@ -99,14 +99,14 @@ const deleteBtn = document.getElementById("delete-btn");
 const editBtn = document.getElementById("edit-btn");
 const saveBtn = document.getElementById("save-btn");
 
-// saveBtn.style.display = "none";
-// editBtn.style.display = "block";
-// deleteBtn.style.display = "block";
+
 
 const updatePost = async (e) => {
   e.preventDefault();
   const postId = e.target.getAttribute("data-postId");
   const postBody = document.getElementById(`input-${postId}`).value.trim();
+
+  
 
   if ((postId, postBody)) {
     const response = await fetch(`api/posts/${postId}`, {

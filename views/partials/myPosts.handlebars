@@ -14,15 +14,11 @@
           class="delete-btn"
           data-postId="{{id}} "
           onclick="deletePost(event)"
-        ><i
-            class="bi bi-trash"
-            {{!-- onclick="deletePost(event)" --}}
-            data-postId="{{id}}"
-          ></i>
+        ><i class="bi bi-trash" data-postId="{{id}}"></i>
         </button>
         <button
           id="save-btn"
-          class="edit-btn hidden"
+          class="edit-btn"
           data-postId="{{id}}"
           onclick="updatePost(event)"
         >Save
