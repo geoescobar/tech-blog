@@ -132,10 +132,6 @@ const edit = (e) => {
   const postId = e.target.getAttribute("data-postId");
   const inputField = document.getElementById(`input-${postId}`);
   console.log("save btn", saveBtn);
-  // deleteBtn.style.display = "none";
-  // saveBtn.style.display = "block";
-  // saveBtn.classList.toggle("hidden");
-  // editBtn.style.display = "none";
   inputField.hidden = false;
 };
 

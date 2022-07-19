@@ -55,6 +55,9 @@ router.get("/homepage", withAuth, async (req, res) => {
   console.log("test:", req.session.user_id);
   try {
     const userPosts = await Posts.findAll({
+      include: {
+        model: User,
+      },
       where: {
         user_id: req.session.user_id,
       },
