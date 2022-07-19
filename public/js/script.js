@@ -99,28 +99,43 @@ const deleteBtn = document.getElementById("delete-btn");
 const editBtn = document.getElementById("edit-btn");
 const saveBtn = document.getElementById("save-btn");
 
-saveBtn.style.display = "none";
-editBtn.style.display = "block";
-deleteBtn.style.display = "block";
+// saveBtn.style.display = "none";
+// editBtn.style.display = "block";
+// deleteBtn.style.display = "block";
 
-editBtn.addEventListener("click", () => {
-  saveBtn.style.display = "block";
-  deleteBtn.style.display = "none";
-  editBtn.style.display = "none";
-});
+const updatePost = async (e) => {
+  e.preventDefault();
+  const postId = e.target.getAttribute("data-postId");
+  const postBody = document.getElementById(`input-${postId}`).value.trim();
 
-saveBtn.addEventListener("click", () => {
-  saveBtn.style.display = "none";
-  deleteBtn.style.display = "block";
-  editBtn.style.display = "block";
-});
+  if ((postId, postBody)) {
+    const response = await fetch(`api/posts/${postId}`, {
+      method: "PUT",
+      body: JSON.stringify({ postBody }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(response);
+    if (response.ok) {
+      saveBtn.style.display = "none";
+      deleteBtn.style.display = "block";
+      editBtn.style.display = "block";
+      window.location.reload();
+    } else {
+      alert("Failed to create post");
+    }
+  }
+};
 
 const edit = (e) => {
-  // console.log("foo", e);
   const postId = e.target.getAttribute("data-postId");
   const inputField = document.getElementById(`input-${postId}`);
-  const postContent = document.getElementById(`post-${postId}`);
-
+  console.log("save btn", saveBtn);
+  // deleteBtn.style.display = "none";
+  // saveBtn.style.display = "block";
+  // saveBtn.classList.toggle("hidden");
+  // editBtn.style.display = "none";
   inputField.hidden = false;
 };
 
@@ -129,7 +144,7 @@ const deletePost = async (e) => {
   if (e.target.hasAttribute("data-postId")) {
     const postId = e.target.getAttribute("data-postId");
 
-    const response = await fetch(`/api/homepage/${postId}`, {
+    const response = await fetch(`/api/posts/${postId}`, {
       method: "DELETE",
     });
 
@@ -142,4 +157,3 @@ const deletePost = async (e) => {
     }
   }
 };
-
