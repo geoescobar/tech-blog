@@ -38,6 +38,7 @@ body {
 }
 
 .button {
+  margin-top: 10px;
   background-color: #44cfcb;
   padding: 10px 10px;
   border-radius: 10%;

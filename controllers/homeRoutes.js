@@ -54,6 +54,8 @@ router.get("/feed", async (req, res) => {
 router.get("/homepage", withAuth, async (req, res) => {
   console.log("test:", req.session.user_id);
   try {
+    const user = await User.findByPk(req.session.user_id);
+
     const userPosts = await Posts.findAll({
       include: {
         model: User,
@@ -64,7 +66,7 @@ router.get("/homepage", withAuth, async (req, res) => {
     });
     const myPosts = userPosts.map((post) => post.get({ plain: true }));
     console.log("my posts:", myPosts);
-    res.render("homepage", { myPosts });
+    res.render("homepage", { myPosts, username: user.username });
   } catch (error) {
     res.json(error);
   }
