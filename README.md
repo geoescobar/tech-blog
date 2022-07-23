@@ -77,7 +77,7 @@ A blog site where developers and tech lovers can publish their blog posts, read 
 
 ![Repo](./public/assets/repo.png)
 
-#### [Demo](https://drive.google.com/file/d/1IEtkz1cXctGDWuphMz7Qh3BOhfPw_VXx/view)
+#### [Demo](https://ge-tech-blog.herokuapp.com/)
 
 ![Repo](./public/assets/home.png)
 ![Repo](./public/assets/login.png)
