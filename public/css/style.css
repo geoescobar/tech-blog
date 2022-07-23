@@ -120,6 +120,7 @@ body {
   border-color: #44cfcb;
   border-style: solid;
   border-width: 2px;
+  margin-bottom: 10px;
 }
 
 .delete-btn {
@@ -130,6 +131,7 @@ body {
   border-color: #44cfcb;
   border-style: solid;
   border-width: 2px;
+  margin-bottom: 10px;
 }
 
 .my-posts {
@@ -160,5 +162,3 @@ body {
 .feed {
   margin-top: 20px;
 }
-
-
